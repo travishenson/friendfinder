@@ -251,7 +251,11 @@
             $("#question10").val()
           ]
         }
-        
+
+        $.post("/api/friends", userData, function(data) {
+          console.log(data);
+        });
+
         $(".form-required").each(function() {
           $(this).val("");
         })
