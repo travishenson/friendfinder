@@ -11,12 +11,255 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>FriendFinder Survey</h1>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h1>FriendFinder Survey</h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="col s12"><h3>About You</h3></div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="John Smith" id="name" type="text" class="validate form-required">
+                <label for="name">Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Ensure URL ends in an image extension (JPG, PNG, GIF, etc.)" id="userPhoto" type="url" class="validate form-required">
+                <label for="userPhoto">Link to Photo</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <h3>Survey Questions</h3>
+                <p>
+                  Please answer our 10 questions on a scale of 1-5.
+                  <ol>
+                    <li>Strongly Disagree</li>
+                    <li>Disagree</li>
+                    <li>Neutral/Unsure</li>
+                    <li>Agree</li>
+                    <li>Strongly Agree</li>
+                  </ol>
+                </p>
+                <hr>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>1. It is easy for you to feel what others are feeling.</h6>
+                <select class="browser-default form-required" id="question1">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>2. You hate to give up if you can't solve a hard problem.</h6>
+                <select class="browser-default form-required" id="question2">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>3. You are careful not to offend people.</h6>
+                <select class="browser-default form-required" id="question3">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>4. You are unsure of what to say when you meet someone.</h6>
+                <select class="browser-default form-required" id="question4">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>5. You think of yourself as being very sensible.</h6>
+                <select class="browser-default form-required" id="question5">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>6. It is hard to really care about work when the job is boring.</h6>
+                <select class="browser-default form-required" id="question6">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>7. You keep calm when under stress.</h6>
+                <select class="browser-default form-required" id="question7">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>8. You get mad at yourself when you make mistakes.</h6>
+                <select class="browser-default form-required" id="question8">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>9. When you are done with your work, you look for more to do.</h6>
+                <select class="browser-default form-required" id="question9">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col l7 s12">
+                <h6>10. You look back and feel bad about things you've done.</h6>
+                <select class="browser-default form-required" id="question10">
+                  <option value="" disabled selected>Select Answer</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2 (Disagree)</option>
+                  <option value="3">3 (Neutral/Unsure)</option>
+                  <option value="4">4 (Agree)</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>   
+              </div>      
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <button class="btn waves-effect waves-light blue btn-large" id="submit" type="submit" name="action">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </main>
 
+  <footer>
+    <div class="container">
+      <div class="row">
+        <hr>
+        <div class="col l4 offset-l4 center-align">
+          <a href="/api/friends">API Data</a> | 
+          <a href="https://github.com/travishenson/friendfinder" target="_new">GitHub Repo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var validForm = true;
+      formValidation();
 
-  </div>
+      if (validForm === true) {
+        sendData();
+      } else {
+        alert("Your survey is invalid! Please fill in all fields.");
+      };
+      
+      function formValidation() {
+        $(".form-required").each(function() {
+          if ($(this).val() === null || $(this).val() === "") {
+            validForm = false;
+          };
+        });
+        return validForm;
+      }
+
+      function sendData() {
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#userPhoto").val(),
+          scores: [
+            $("#question1").val(),
+            $("#question2").val(),
+            $("#question3").val(),
+            $("#question4").val(),
+            $("#question5").val(),
+            $("#question6").val(),
+            $("#question7").val(),
+            $("#question8").val(),
+            $("#question9").val(),
+            $("#question10").val()
+          ]
+        }
+        
+        $(".form-required").each(function() {
+          $(this).val("");
+        })
+        $("select").each(function() {
+          $(this).prop("selectedIndex", 0);
+        })
+      }
+    })
+  </script>
 </body>
 </html>
