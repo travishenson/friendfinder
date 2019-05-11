@@ -212,6 +212,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Structure -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h4>You matched with <span id="match-name"></span>!</h4>
+      <img id="match-photo" class="responsive-img" src="" alt="">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Close</a>
+    </div>
+  </div>
   
   <script>
     $("#submit").on("click", function(event) {
@@ -253,7 +264,12 @@
         }
 
         $.post("/api/friends", userData, function(data) {
-          alert('You matched with ' + data.name);
+
+          $("#match-name").text(data.name);
+          $("#match-photo").attr("src", data.photo);
+
+          $("#modal").modal();
+          $("#modal").modal("open");
         });
 
         $(".form-required").each(function() {
