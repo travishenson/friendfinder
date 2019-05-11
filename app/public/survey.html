@@ -253,7 +253,7 @@
         }
 
         $.post("/api/friends", userData, function(data) {
-          console.log(data);
+          alert('You matched with ' + data.name);
         });
 
         $(".form-required").each(function() {
